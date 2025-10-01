@@ -6,8 +6,12 @@ import numpy as np
 # =======================
 # Load trained artifacts
 # =======================
-with open(r"C:/Users/FlavyaLekkala/laptop_project/laptop_price_model.pkl", "rb") as f:
+# with open(r"C:/Users/FlavyaLekkala/laptop_project/laptop_price_model.pkl", "rb") as f:
+    
+with open(r"https://github.com/LEKKALAFLAVYA/Laptop_price_prediction/blob/main/laptop_price_model.pkl", "rb") as f:
     artifacts = pickle.load(f)
+
+
 
 model = artifacts["model"]
 scaler = artifacts["scaler"]
@@ -121,5 +125,6 @@ if st.button("Predict Price"):
         st.success(f"💰 Predicted Laptop Price: ₹ {predicted_price:,.0f}")
 
         
+
 
 
